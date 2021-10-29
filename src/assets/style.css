@@ -1,0 +1,22 @@
+body {
+    height: 100%;
+    background-color: #c48d3f;
+    color: white;
+}
+
+#app {
+    font-family: 'Itim', cursive;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#image {
+    width: 500px;
+    height: auto;
+
+    border: 15px solid white;
+    border-radius: 34px;
+}
