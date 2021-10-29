@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <h1>On {{date}} it is {{villager.gender == 'Male' ? '♂' : '♀'}} {{villager.name['name-USen']}}s birthday!</h1>
-        <img id="image" :src="villager.image_uri">
+        <h1>On {{date}} it is {{villager.gender == 'Male' ? '♂' : '♀'}} {{villager.name}}s birthday!</h1>
+        <img id="image" :src="villager.image">
 
         <br>
         <h2>Personality: {{villager.personality}}</h2>
-        <h2>Catchphrase: {{villager['catch-phrase']}}</h2>
+        <h2>Catchphrase: {{villager.catchphrase}}</h2>
     </div>
 </template>
 
@@ -19,17 +19,25 @@ let todayDate
 
 function findBirthday(bday) {
     for (const key in villagers) {
-        const subObject = villagers[key]
+        const o = villagers[key]
 
-        if (subObject['birthday'] === bday) {
-            return subObject
+        if (o['birthday'] === bday) {
+            return {
+                name: o.name['name-USen'],
+                image: o.image_uri,
+                gender: o.gender,
+                hobby: o.hobby,
+                personality: o.personality,
+                catchphrase: o['catch-phrase'],
+                birthday: o.birthday,
+            }
         }
     }
 }
 
 export default {
     mounted() {
-        
+
     },
     data() {
         const today = new Date()
