@@ -2,7 +2,8 @@
 A simple Vue web app to display the villager whose birthday is today.
 
 ## Running
-`npm run dev` starts a development server and opens it in your browser.
+- `npm install` installs the dependencies
+- `npm run dev` starts a development server and opens it in your browser.
 
 ## Attribution
 The included JSON file is provided from https://github.com/alexislours/ACNHAPI.
