@@ -1,3 +1,4 @@
+# This repository has been migrated to the self-hosted ari-web Forgejo instance: <https://git.ari.lt/ari/villager-bdays>
 # villager-bdays
 A simple Vue web app to display the villager whose birthday is today.
 
